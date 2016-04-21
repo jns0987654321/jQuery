@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>jQuery Demo Events and Effects!</title>
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<style type="text/css">
+
+	div {
+		width: 100px;
+		height: 100px;
+		background: green;
+		float:	left;
+		margin: 20px;
+	}
+
+
+	</style>
+</head>
+<body>
+
+<h1>jQuery Events and Effects!!!!</h1>
+
+<ul>
+	<li>Hello</li>
+	<li id="worldID">World</li>
+</ul>
+
+<input type="text" placeholder"Name">
+
+<button>Click me</button>
+<button>Don't click me</button>
+<button>I'm a button</button>
+
+<div>WOW</div>
+<div>YEAH</div>
+<div>WOOHOO</div>
+
+</body>
+
+<script type="text/javascript">
+
+$("button").on("click", function(){
+	
+	$('div').fadeOut(1000, function(){
+		//will run after fadeout finished
+		$(this).remove(); //removes all divs from DOM
+	});
+	//code here doesn't wait for fade to finish
+});
+
+/*
+EVENTS
+
+1) click event listener
+$().click()
+
+2) jQuery this
+$(this).css()
+
+3) .keypress() event listener for typing on keyboard
+	function(event){} -> use event object for more info and detect key pressed
+	use "which" for keyCode
+
+4) .on() -> similar to addEventListener vanilla js
+ADDs listeneres for all potential future elements!
+
+EFFECTS
+
+fadeIn fadeOut fadeTOggle SlideUp SlideDown SLideTOggle
+
+
+*/
+</script>
+
+</html>
